@@ -1,0 +1,42 @@
+$font: #e4e4e4;
+
+.typing {
+	font-family: 'arial', monospace;
+	padding: 1em 2em;
+
+	h1 {
+		color: $font;
+	}
+
+	.cursor {
+		border-left: 0.1em solid $font;
+		animation: blink 0.7s steps(1) infinite;
+	}
+
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+}
+
+.texts {
+	font-family: 'arial', monospace;
+	opacity: 1;
+	color: #e4e4e4;
+	padding: 1em 2em;
+	font-size: 18px;
+	letter-spacing: 2px;
+
+}
+
+.cursor {
+	border-left: 0.1em solid $font;
+	animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}

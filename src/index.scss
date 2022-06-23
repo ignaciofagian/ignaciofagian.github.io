@@ -1,0 +1,513 @@
+@import "reflex.scss";
+
+// ##### header #####
+.navbar {
+  background: transparent;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  border-bottom: solid 1px rgba(219, 219, 219, 0.103);
+
+  &.fixedNavbar {
+    position: fixed;
+    background: #0d48a1ef;
+    transition: 0.9s all;
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin: 0px;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.is-active {
+  color: rgb(210, 210, 210);
+}
+
+.nav-item:hover:after,
+.is-active:after {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.nav-item .active {
+  color: #f4f4f4;
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: -1000px;
+    opacity: 0.8;
+    transition: all 0.8s ease;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-menu.active {
+    background: #474747f8;
+    top: 35px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: rgb(219, 219, 219);
+    border: none;
+  }
+  .nav-links {
+    width: 100%;
+    display: table;
+    margin: 0px;
+    padding: 0.5rem 0rem;
+    font-size: 1.2rem;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 12%);
+    font-size: 1.9rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .content {
+    top: 50% !important;
+  }
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+
+  .icon img {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 10px;
+    color: white;
+  }
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100%;
+
+  .title {
+    font: 45px/1.1em "opensans-bold", sans-serif;
+    color: #fff;
+    letter-spacing: 0px;
+    margin: 0 auto 10px auto;
+  }
+
+  .description {
+    font-size: 18px;
+    color: rgb(197, 197, 197);
+  }
+}
+
+.scrolldown a {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -29px;
+  color: #fff;
+  display: block;
+  height: 45px;
+  width: 45px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff26;
+
+  &:hover {
+    color: #003da5;
+    background-color: #ffffffa6;
+  }
+}
+
+.links {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 0 6px;
+  }
+}
+
+#tsparticles {
+  height: 100vh;
+}
+
+// ##### about #####
+.about {
+  padding-top: 50px;
+  .avatar {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    .avatar-img {
+      width: 9em;
+      height: 9em;
+      border-radius: 100%;
+      background-color: rgba(10, 57, 185, 0.422);
+
+      img {
+        width: -webkit-fill-available;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+// ##### footer #####
+.footer {
+  background-color: rgba(84, 84, 84, 0.904);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+// ##### education #####
+.education {
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+  background-color: #f7f7f7b9;
+
+  .education-item {
+    margin-bottom: 25px;
+  }
+
+  .education-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  .education-subtitle {
+    color: gray;
+    margin-bottom: 5px;
+  }
+}
+
+// ##### experience #####
+.experiences {
+  .experience {
+    border: solid 1px #e6e6e6;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+
+    .experience-title {
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+
+    .experience-subtitle {
+      color: gray;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+  }
+  .company {
+    float: right;
+    margin-right: 15px;
+
+    .company-image {
+      img {
+        height: 45px;
+      }
+    }
+  }
+}
+
+// ##### skills #####
+.skills {
+  .skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skill {
+    width: 130px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    img {
+      width: 46px;
+      height: 46px;
+    }
+
+    span {
+      margin-top: 8px;
+      text-align: center;
+      display: block;
+      font-weight: 500;
+    }
+  }
+}
+
+// ##### projects #####
+.projects {
+  .row {
+    display: block;
+  }
+  .project {
+    padding: 20px;
+    border: solid 1px #d6d6d6;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    background-color: #f7f7f7;
+  }
+
+  .project-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  .project-subtitle {
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .project-image {
+    margin-bottom: 10px;
+    img {
+      width: -webkit-fill-available;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .row {
+      display: flex;
+    }
+
+    .project.col-md-4 {
+      width: calc(33% - 8px);
+    }
+
+    .project.col-md-4:nth-child(1),
+    .project.col-md-4:nth-child(2) {
+      margin-right: 16px;
+    }
+  }
+}
+
+// ##### get in touch #####
+.getintouch {
+  background-color: #0d47a1eb;
+  color: white;
+
+  .getintouch-about {
+    padding-left: 25px;
+  }
+
+  .form {
+    padding-right: 25px;
+  }
+  .getintouch-status {
+    margin-left: 8px;
+  }
+
+  .getintouch-feeback {
+    padding: 10px;
+    border: solid 1px rgb(221, 221, 221);
+    background-color: #3eb143ad;
+    margin-right: 25px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+   
+  }
+}
+
+// ##### global #####
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.05rem;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font: 16px/25px arial;
+  background: white;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0;
+  color: #003da5;
+  padding: 8px 15px;
+  border: solid 1px #003da5;
+  cursor: pointer;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  border-radius: 4px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #003da5;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: #003da5;
+    background-color: white;
+  }
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+    bottom: -6px;
+  }
+}
+
+section {
+  padding: 2em 0;
+}
+
+@media screen and (max-width: 960px) {
+  .about {
+    .avatar {
+      justify-content: center;
+    }
+  }
+}
+
+.tag {
+  background-color: #e8e8e8;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-right: 7px;
+  font-size: 15px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+
+  input,
+  textarea {
+    color: #333;
+    padding: 0.5rem 0.6rem;
+    width: -webkit-fill-available;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    letter-spacing: 0px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    border: solid 1px #e0ebff;
+    outline: none;
+
+    &:focus {
+      background-color: #f8f8f8e7;
+      border: solid 1px #a1a1a1;
+    }
+  }
+
+  .label {
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .error-feedback {
+    color: #f1c3c3;
+    font-size: 0.9rem;
+  }
+
+  .invalid {
+    border: solid 2px #fe4d4d;
+  }
+}
