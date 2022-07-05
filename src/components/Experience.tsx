@@ -8,10 +8,23 @@ export default function Experience() {
 				subtitle="Full stack developer 2015 - now"
 				logo="assets/bw-logo.png"
 				tags={['C#', 'React', 'SQLServer', 'NodeJS', 'Genexus']}
-				text={`Develop a market order managment system with ReactJS.
-        Develop real time system using websocket (socketio) technologies.Technical leader & Software architect.
-        Worked on large project using ReactJS, NodeJS y Genexus as technologies.
-        Develop a market order routing platform using FIX Protocol with a plugin system architecture built in NetCore 3.`}
+				text={
+					<>
+						<ul>
+							<li>Developer of a market order managment system with ReactJS and nodeJS.</li>
+							<li>Developer of a real time system using websocket (socketio) technolo- gies.</li>
+							<li>Technical leader & Software architect.</li>
+							<li>
+								Part of the developing team of large project using ReactJS, NodeJS and Genexus as
+								technologies.
+							</li>
+							<li>
+								Developer of a market order routing platform using FIX Protocol with a plugin system
+								architecture built in NetCore 3.
+							</li>
+						</ul>
+					</>
+				}
 			/>
 
 			<Item
@@ -20,10 +33,18 @@ export default function Experience() {
 				subtitle="Full stack GIS developer 2016 - now"
 				logo="assets/gubuy-logo.png"
 				tags={['C#', 'SQLServer', 'React', 'NodeJS', 'CSS', 'Python', 'GIS']}
-				text={`Develop web map visualizers (ArcGIS js, React). Geoprocess implementation published as web service.
-        GIS data base design (PostGIS, SQLServer).
-        GIS Infraestructure administrador (ArcGIS Server, Portal for ArcGIS, GeoServer).
-        Maintenance of many system developed in .Net (C#).`}
+				text={
+					<>
+						<ul>
+							<li>Developer of web map viewer (ArcGIS js, ReactJS).</li>
+							<li>Geoprocess implementation published as web service.</li>
+							<li>GIS data base designer (PostGIS, SQLServer).</li>
+							<li>GIS Infrastructure management (ArcGIS Server, Portal for ArcGIS, GeoServer).</li>
+							<li>Developer of several GIS tools.</li>
+							<li>Maintenance of several systems developed in .Net (C#).</li>
+						</ul>
+					</>
+				}
 			/>
 
 			<Item
@@ -32,7 +53,13 @@ export default function Experience() {
 				subtitle="Full stack GIS 2021"
 				logo="assets/gubuy-logo.png"
 				tags={['C#', 'SQLServer', 'React', 'NodeJS', 'CSS', 'GIS']}
-				text={`Development of a GIS dashboard Platform using NextJS, Sequelize y ArcGIS JS.`}
+				text={
+					<>
+						<ul>
+							<li>Development of a GIS dashboard Platform using NextJS, Sequelize and ArcGIS JS.</li>
+						</ul>
+					</>
+				}
 			/>
 
 			<Item
@@ -41,9 +68,16 @@ export default function Experience() {
 				subtitle="Junior developer 2014"
 				logo="assets/bw-logo.png"
 				tags={['SQLServer', 'Genexus']}
-				text={`Maintenance of many system using Genexus Evo3 (c#) as the main technology. 
-        Development in AngularJS, give the solution to a performance issues.
-        Implement chart graphic components using D3js.`}
+				text={
+					<>
+						<ul>
+							<li>Maintenance of several systems using Genexus Evo3 (c#) as the main technology.</li>
+							<li>Development in AngularJS technology.</li>
+							<li>Solution to several performance issues.</li>
+							<li>Implementation of chart components using D3js.</li>
+						</ul>
+					</>
+				}
 			/>
 		</section>
 	);

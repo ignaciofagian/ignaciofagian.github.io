@@ -6,20 +6,20 @@ export default function Projects() {
 				<Item
 					title="Blockchain Token tracker"
 					subtitle="ReactJs, NodeJs, TypeORM, Web3"
-					image={`captura.jpg`}
-					text={`A website where we can view the last 100 tokens deployed on BSC blockchain. Include all the tokens information like name, contract, with associated safety information`}
+					image={`token-track.png`}
+					text={`A website to view the last 100 tokens deployed on BSC blockchain, including all the token information such as name, contract, and associated risk information.`}
 				/>
 				<Item
 					title="Telegram bot"
 					subtitle="NodeJs, Web3"
-					image={`captura.jpg`}
-					text={`A telegram bot built in nodejs, it call smart contract function and print result in a specific telegram group`}
+					image={`maxbuy.png`}
+					text={`A telegram bot built in nodejs, which calls smart contract functions and prints the results in a specific telegram group.`}
 				/>
 				<Item
 					title="Portfolio web"
 					subtitle="ReactJs, CSS3, HTML5"
 					image={`portfolio-screenshot.png`}
-					text={`This project contains code for the present portfolio.`}
+					text={`A website with my protfolio developed in ReactJs.`}
 				/>
 			</div>
 		</section>
